@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ArtSpace</string>
+    <string name="uzumaki">Uzumaki (2025)</string>
+    <string name="ritual">Ritual (2024)</string>
+    <string name="black_hole">Black hole (2025)</string>
+    <string name="monk_punk">Monk punk (2021)</string>
+    <string name="re_naissance">Renaissance (2023)</string>
+    <string name="state">State (2026)</string>
+    <string name="timekeeper">Timekeeper (2020)</string>
+    <string name="white_space">White Space (2019)</string>
+</resources>
