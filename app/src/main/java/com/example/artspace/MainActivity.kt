@@ -172,7 +172,7 @@ fun ArtWork( modifier: Modifier = Modifier
 
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(80.dp))
 
                 Row(
                     modifier = modifier
