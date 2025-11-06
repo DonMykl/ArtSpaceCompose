@@ -27,12 +27,14 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Composition
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -144,7 +146,9 @@ fun ArtWork( modifier: Modifier = Modifier
                                 .padding(
                                     top = 16.dp,
                                     bottom = 16.dp
-                                )
+                                ),
+                            contentScale = ContentScale.Fit
+
 
                         )
                     }
