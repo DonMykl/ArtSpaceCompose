@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -27,7 +26,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Composition
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,7 +33,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -51,18 +48,20 @@ class MainActivity : ComponentActivity() {
         setContent {
             ArtSpaceTheme {
 
-                    ArtWork()
-                }
+                ArtWork()
             }
         }
+    }
 
 }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ArtWork( modifier: Modifier = Modifier
+fun ArtWork(
+    modifier: Modifier = Modifier
 ) {
     var currentImage by remember { mutableStateOf(1) }
-    var totalImages = 7
+    val totalImages = 7
 
 
     val imageResource = when (currentImage) {
@@ -87,7 +86,7 @@ fun ArtWork( modifier: Modifier = Modifier
     }
 
 
-    Scaffold (
+    Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
@@ -103,7 +102,7 @@ fun ArtWork( modifier: Modifier = Modifier
         }
     ) { innerPadding ->
 
-        Surface (
+        Surface(
             modifier = modifier
                 .fillMaxSize()
                 .padding(
@@ -126,7 +125,7 @@ fun ArtWork( modifier: Modifier = Modifier
                     .fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Card (
+                Card(
                     elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
                     modifier = Modifier
                         .padding(top = 16.dp)
